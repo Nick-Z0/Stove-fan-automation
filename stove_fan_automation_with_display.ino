@@ -15,10 +15,10 @@ MAX6675 thermocouple(thermoCLK, thermoCS, thermoDO);
 LCD_I2C lcd(0x27, 16, 2);
 
 // Constants
-const long intervalPotRead = 100;
+const long intervalPotRead = 200;
 const long intervalTemperatureRead = 1000;
 const long intervalDisplayRefresh = 200;
-const long intervalRelayUpdate = 5000;
+const long intervalRelayUpdate = 30000;
 
 // Variables
 int potVal;
@@ -87,6 +87,3 @@ void loop() {
     lcd.print(" C");
   }
 }
-
-
-
